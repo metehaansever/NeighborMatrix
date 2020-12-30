@@ -26,6 +26,7 @@ int averageMatrix( int** arr , const int col , const int row ) {
         cout << "out of range" << endl;
         return 0;
     }
+    // Find neighbor for each elements and then return average.
     for(int m = fmax(0,row-1); m <= fmin(row+1,rowLimit); m++ ){
         for(int n = fmax(0,col-1); n <= fmin(col+1,colLimit); n++){
             if( m!= row || n != col){
@@ -62,6 +63,9 @@ void randomFill(int** arr,const int row,const int col){
 
 int main(){
 
+    //thread th (Matrix);
+    //th.join();
+    
     // read row,col and thread from input.txt
     ifstream input;
     input.open("C:\\Users\\metehaansecer\\CLionProjects\\untitled1\\input.txt"); // change with your own path
