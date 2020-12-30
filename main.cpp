@@ -10,10 +10,7 @@ using namespace std;
 
 
 int averageMatrix( int** arr , const int col , const int row ) {
-//    int** a2d2 = new int* [row];
-//    for ( int i = 0; i < row; i++ ) {
-//        a2d2[i] = new int[col];
-//    }
+
     int rowLimit = sizeof(arr)-1;
     int colLimit = sizeof(arr[0])-1;
     int sum = 0;
@@ -31,10 +28,8 @@ int averageMatrix( int** arr , const int col , const int row ) {
         for(int n = fmax(0,col-1); n <= fmin(col+1,colLimit); n++){
             if( m!= row || n != col){
                 sum += arr[m][n];
-//              a2d2[m][n] = round(sum/4);
             }
             return round(sum/4);
-//            return a2d2[m][n];
         }
     }
     return 0;
